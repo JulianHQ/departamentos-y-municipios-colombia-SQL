@@ -1,82 +1,70 @@
-# ************************************************************
-# Sequel Pro SQL dump
-# Version 4541
-#
-# http://www.sequelpro.com/
-# https://github.com/sequelpro/sequelpro
-#
-# Host: 127.0.0.1 (MySQL 5.6.33)
-# Database: colombia
-# Generation Time: 2016-12-15 11:55:40 +0000
-# ************************************************************
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Servidor: Haha, not gonna tell you!
+-- Tiempo de generación: 21-05-2018 a las 10:11:02
+-- Versión del servidor: 5.0.96
+-- Versión de PHP: 5.5.27
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+--
+-- Base de datos: `ipred_plataformatic`
+--
 
-# Dump of table departamentos
-# ------------------------------------------------------------
+-- --------------------------------------------------------
 
-DROP TABLE IF EXISTS `departamentos`;
+--
+-- Estructura de tabla para la tabla `departamentos`
+--
 
-CREATE TABLE `departamentos` (
-  `id_departamento` int(2) unsigned NOT NULL AUTO_INCREMENT,
-  `departamento` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id_departamento`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS `departamentos` (
+  `id` int(10) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-LOCK TABLES `departamentos` WRITE;
-/*!40000 ALTER TABLE `departamentos` DISABLE KEYS */;
+--
+-- Volcar la base de datos para la tabla `departamentos`
+--
 
-INSERT INTO `departamentos` (`id_departamento`, `departamento`)
-VALUES
-	(8,'ATLÁNTICO'),
-	(11,'BOGOTÁ, D.C.'),
-	(13,'BOLÍVAR'),
-	(15,'BOYACÁ'),
-	(17,'CALDAS'),
-	(18,'CAQUETÁ'),
-	(19,'CAUCA'),
-	(20,'CESAR'),
-	(23,'CÓRDOBA'),
-	(25,'CUNDINAMARCA'),
-	(27,'CHOCÓ'),
-	(41,'HUILA'),
-	(44,'LA GUAJIRA'),
-	(47,'MAGDALENA'),
-	(50,'META'),
-	(52,'NARIÑO'),
-	(54,'NORTE DE SANTANDER'),
-	(63,'QUINDIO'),
-	(66,'RISARALDA'),
-	(68,'SANTANDER'),
-	(70,'SUCRE'),
-	(73,'TOLIMA'),
-	(76,'VALLE DEL CAUCA'),
-	(81,'ARAUCA'),
-	(85,'CASANARE'),
-	(86,'PUTUMAYO'),
-	(88,'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA'),
-	(91,'AMAZONAS'),
-	(94,'GUAINÍA'),
-	(95,'GUAVIARE'),
-	(97,'VAUPÉS'),
-	(99,'VICHADA');
-
-/*!40000 ALTER TABLE `departamentos` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO `departamentos` (`id`, `nombre`) VALUES
+(1, 'Amazonas'),
+(2, 'Antioquia'),
+(3, 'Arauca'),
+(4, 'Atlántico'),
+(5, 'Bolívar'),
+(6, 'Boyacá'),
+(7, 'Caldas'),
+(8, 'Caquetá'),
+(9, 'Casanare'),
+(10, 'Cauca'),
+(11, 'Cesar'),
+(12, 'Chocó'),
+(13, 'Córdoba'),
+(14, 'Cundinamarca'),
+(15, 'Güainia'),
+(16, 'Guaviare'),
+(17, 'Huila'),
+(18, 'La Guajira'),
+(19, 'Magdalena'),
+(20, 'Meta'),
+(21, 'Nariño'),
+(22, 'Norte de Santander'),
+(23, 'Putumayo'),
+(24, 'Quindio'),
+(25, 'Risaralda'),
+(26, 'San Andrés y Providencia'),
+(27, 'Santander'),
+(28, 'Sucre'),
+(29, 'Tolima'),
+(30, 'Valle del Cauca'),
+(31, 'Vaupés'),
+(32, 'Vichada');
